@@ -1,0 +1,250 @@
+/* 3D Slideshow */ 
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: #eeeeee;
+}
+
+#body{
+	display: none;
+}
+
+#slideshow {
+	margin: 0 auto;
+	padding-top: 10px;
+	height: 600px;
+	width: 100%;
+	background-color: #eeeeee;
+	box-sizing: border-box;
+	text-align-last: center;
+}
+
+.slideshow-title {
+	font-family: 'Allerta Stencil';
+	font-size: 62px;
+	color: #fff;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 25%;
+	letter-spacing: 3px;
+	font-weight: 300;
+}
+
+
+.entire-content {
+	margin: auto;
+	width: 120px;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 80px;
+}
+
+.content-carrousel {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 50s infinite linear;
+	transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+.content-carrousel figure {
+	width: ;
+	height: 120px;
+	border: 1px solid #ff6d48;
+	overflow: hidden;
+	position: absolute;
+}
+
+.content-carrousel figure:nth-child(1) {
+	transform: rotateY(0deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(2) {
+	transform: rotateY(30deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(3) {
+	transform: rotateY(60deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(4) {
+	transform: rotateY(90deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(5) {
+	transform: rotateY(120deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(6) {
+	transform: rotateY(150deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(7) {
+	transform: rotateY(180deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(8) {
+	transform: rotateY(210deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(9) {
+	transform: rotateY(240deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(10) {
+	transform: rotateY(270deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(11) {
+	transform: rotateY(300deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(12) {
+	transform: rotateY(330deg) translateZ(320px); 
+} .content-carrousel figure:nth-child(13) {
+	transform: rotateY(360deg) translateZ(320px); 
+}
+
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 1px;
+}
+
+.content-carrousel img {
+	image-rendering: auto;
+	transition: all 300ms;
+	width: 100%;
+	height: 100%;
+}
+
+.content-carrousel img:hover {
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+	}
+}
+
+
+/* Popups */
+#pop1, #pop2, #pop3, #pop4, #pop5, #pop6, #pop7, #pop8, #pop9, #pop10, #pop11, #pop12{
+	position: fixed;
+	top: 0px; left: 0px;
+	background: rgba(0, 0, 0, 0.9);
+	height: 100%;
+	width: 100%;
+	display: none;
+	text-align-last: center;
+}
+
+span{
+	position: absolute;
+	top: 0; right: 10px;
+	font-size: 40px;
+	font-weight: bolder;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+/* @media(max-width:768px){
+	.container-fluid, #pop1, #pop2 img{
+		width: 95%;
+	}
+} */
+
+#pop1{
+	z-index: 101;
+	text-align-last: center;
+	display: none;
+}
+#pop2{
+	z-index: 102;
+	text-align-last: center;
+	display: none;
+}
+#pop3{
+	z-index: 103;
+	text-align-last: center;
+	display: none;
+}
+#pop4{
+	z-index: 101;
+	text-align-last: center;
+	display: none;
+}
+#pop5{
+	z-index: 102;
+	text-align-last: center;
+	display: none;
+}
+#pop6{
+	z-index: 103;
+	text-align-last: center;
+	display: none;
+}
+#pop7{
+	z-index: 101;
+	text-align-last: center;
+	display: none;
+}
+#pop8{
+	z-index: 102;
+	text-align-last: center;
+	display: none;
+}
+#pop9{
+	z-index: 103;
+	text-align-last: center;
+	display: none;
+}
+#pop10{
+	z-index: 101;
+	text-align-last: center;
+	display: none;
+}
+#pop11{
+	z-index: 102;
+	text-align-last: center;
+	display: none;
+}
+#pop12{
+	z-index: 103;
+	text-align-last: center;
+	display: none;
+}
+
+
+
+.img-pop1, .img-pop2, .img-pop3, .img-pop4, .img-pop5, .img-pop6, .img-pop7, .img-pop8, .img-pop9, .img-pop10, .img-pop11, .img-pop12{
+	height: -webkit-fill-available;
+	width: auto;
+}
+
+
+
+
+
+/* Heading */
+.head{
+	display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+	font: 40px white;
+	color: #000000;
+	background-color: #ff6d48;
+	font-family: "Brush Script MT" cursive;
+}
+
+
+
+
+/* Footer */
+footer{
+	background-color: #ff6d48;
+	bottom: 0px;
+	position: fixed;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 100%;
+	text-align-last: center;
+}
